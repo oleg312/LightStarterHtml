@@ -1,0 +1,80 @@
+.header
+   position: relative
+   position: fixed
+   width: 100%
+   z-index: 60
+   height: 100px
+   transition: all .4s linear
+   display: flex
+   align-items: center
+   &::before
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      background: black
+      z-index: 65
+   .container
+      width: 100%
+      height: 100%
+   .hamburger
+      display: none
+      @media screen and ( max-width: 610px )
+         position: relative
+         display: block
+         z-index: 3
+   .nav
+      position: relative
+      z-index: 69
+      &.is-active
+         right: 0
+         transition: all .4s ease-in-out
+      @media screen and ( max-width:610px )
+         position: fixed
+         right: -100%
+         top: 0
+         width: 100%
+         height: 100%
+         background: green
+         transition: all .4s ease-in-out
+         z-index: 60
+   .nav__list
+      height: 100%
+      width: 100%
+      position: relative
+      z-index: 2
+      display: flex
+      justify-content: center
+      align-items: center
+      list-style: none
+      padding-left: 0
+      margin-bottom: 0
+      overflow: auto
+      @media screen and ( max-width:610px )
+         display: flex
+         flex-direction: column
+         justify-content: space-between
+         padding-top: 100px
+   .nav__item
+      position: relative
+      margin-right: 60px
+      list-style: none
+      @media screen and ( max-width:610px )
+         margin-right: 0
+         margin-top: 30px
+         margin-bottom: 30px
+   .nav__link
+      position: relative
+      color: white
+      font-size: 13px
+      font-weight: 700
+      text-transform: uppercase
+      letter-spacing: 2.6px
+      transition: all .2s linear
+      text-decoration: none
+      &:hover
+         transition: all .2s linear
+         color: red
+         cursor: pointer
