@@ -1,9 +1,9 @@
 # LightStarterHtml
 
-![enter image description here](https://i.imgur.com/xUELP0h.jpeg)
+![enter image description here](https://i.imgur.com/jUBbBD9.png)
 
 ## ## How to use
-<pre>git clone https://github.com/oleg312/LightStarter.git</pre>
+<pre>git clone https://github.com/oleg312/LightStarterHtml.git</pre>
 1 Clone or <a  href="https://github.com/oleg312/LightStarterHtml/archive/main.zip">Download</a>  **LightStarterHtml** from GitHub
 
 2 Open terminal in a folder
