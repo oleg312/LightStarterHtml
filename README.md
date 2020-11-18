@@ -3,7 +3,9 @@
 ![enter image description here](https://i.imgur.com/jUBbBD9.png)
 
 ## ## How to use
+
 <pre>git clone https://github.com/oleg312/LightStarterHtml.git</pre>
+
 1 Clone or <a  href="https://github.com/oleg312/LightStarterHtml/archive/main.zip">Download</a>  **LightStarterHtml** from GitHub
 
 2 Open terminal in a folder
@@ -18,27 +20,27 @@
 
 ## Source_folder **src**
 
-- Main **_file_** located in **templates/**
+- Main **_file_** located in **index.html**
 
-- All custom **_scripts_** located in **js/**
+- All custom **_scripts_** located in **assets/js/**
 
-- All custom **_styles_** located in **sass/**
+- All custom **_styles_** located in **assets/sass/**
 
-- All **_images_** sources placed in **images/**
+- All **_images_** sources placed in **assets/images/**
 
-- All **_fonts_** sources placed in **fonts/**
+- All **_fonts_** sources placed in **assets/fonts/**
 
 ## Project_folder **dist** (created automatically)
 
 - Main **_file_** located in **index.html**
 
-- All custom **_scripts_** located in **js/**
+- All custom **_scripts_** located in **assets/js/**
 
-- All custom **_styles_** located in **css/**
+- All custom **_styles_** located in **assets/css/**
 
-- All **_images_** sources placed in **images/**
+- All **_images_** sources placed in **assets/images/**
 
-- All **_fonts_** sources placed in **fonts/**
+- All **_fonts_** sources placed in **assets/fonts/**
 
 ## ## Basic commands
 
