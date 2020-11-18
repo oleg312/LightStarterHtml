@@ -66,7 +66,7 @@
 
 	-  <a  href="https://www.npmjs.com/package/gulp-imagemin">gulp-imagemin</a>
 
-	-  <a  href="https://www.npmjs.com/package/gulp-file-include">File Include</a>
+	-  <a  href="https://www.npmjs.com/package/panini">Panini</a>
 
 	-  <a  href="https://www.npmjs.com/package/gulp-rename">gulp-rename</a>
 
@@ -79,5 +79,7 @@
 	-  <a  href="https://www.npmjs.com/package/gulp-uglify-es">gulp-uglify-es</a>
 
 	-  <a  href="https://www.npmjs.com/package/gulp-webp">gulp-webp</a>
+
 	-  <a  href="https://www.npmjs.com/package/gulp-webp-html">gulp-webp-html</a>
+
 	-  <a  href="https://www.npmjs.com/package/gulp-webpcss">gulp-webpcss</a>

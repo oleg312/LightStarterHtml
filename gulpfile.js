@@ -5,30 +5,30 @@ let fs = require('fs');
 let path = {
    build: {
       html: project_folder + "/",
-      css: project_folder + "/styles/",
-      js: project_folder + "/js/",
-      img: project_folder + "/images/",
-      fonts: project_folder + "/fonts/",
+      css: project_folder + "/assets/styles/",
+      js: project_folder + "/assets/js/",
+      img: project_folder + "/assets/images/",
+      fonts: project_folder + "/assets/fonts/",
    },
    src: {
-      html: [source_folder + "/templates/*.html", "!" + source_folder + "/templates/_*.html"],
-      css: source_folder + "/styles/style.sass",
-      js: source_folder + "/js/main.js",
-      img: source_folder + "/images/**/*.{jpg,png,svg,gif,ico,webp}",
-      fonts: source_folder + "/fonts/*.ttf",
+      html: source_folder + "/*.html",
+      css: source_folder + "/assets/styles/style.sass",
+      js: source_folder + "/assets/js/main.js",
+      img: source_folder + "/assets/images/**/*.{jpg,png,svg,gif,ico,webp}",
+      fonts: source_folder + "/assets/fonts/*.ttf",
    },
    watch: {
       html: source_folder + "/**/*.html",
-      css: source_folder + "/styles/**/*.sass",
-      js: source_folder + "/js/**/*.js",
-      img: source_folder + "/images/**/*.{jpg,png,svg,gif,ico,webp}",
+      css: source_folder + "/assets/styles/**/*.sass",
+      js: source_folder + "/assets/js/**/*.js",
+      img: source_folder + "/assets/images/**/*.{jpg,png,svg,gif,ico,webp}",
    },
    clean: "./" + project_folder + "/"
 }
 let { src, dest } = require('gulp'),
    gulp = require('gulp'),
    browsersync = require('browser-sync').create(),
-   fileinclude = require("gulp-file-include"),
+   panini = require('panini'),
    del = require("del"),
    sass = require("gulp-sass"),
    autoprefixer = require("gulp-autoprefixer"),
@@ -52,8 +52,15 @@ function browserSync(params) {
    })
 }
 function html() {
+   panini.refresh();
    return src(path.src.html)
-      .pipe(fileinclude())
+      .pipe(panini({
+         root: source_folder + "/",
+         layouts: source_folder + "/" + 'layouts/',
+         partials: source_folder + "/" + 'partials/',
+         helpers: source_folder + "/" + 'helpers/',
+         data: source_folder + "/" + 'data/'
+      }))
       .pipe(webphtml())
       .pipe(dest(path.build.html))
       .pipe(browsersync.stream())
@@ -87,7 +94,6 @@ function css(params) {
 }
 function js() {
    return src(path.src.js)
-      .pipe(fileinclude())
       .pipe(dest(path.build.js))
       .pipe(
          uglify()
@@ -131,9 +137,9 @@ function fonts(params) {
 }
 function fontsStyle(params) {
 
-   let file_content = fs.readFileSync(source_folder + '/styles/fonts.sass');
+   let file_content = fs.readFileSync(source_folder + '/assets/styles/fonts.sass');
    if (file_content == '') {
-      fs.writeFile(source_folder + '/styles/fonts.sass', '', cb);
+      fs.writeFile(source_folder + '/assets/styles/fonts.sass', '', cb);
       return fs.readdir(path.build.fonts, function (err, items) {
          if (items) {
             let c_fontname;
@@ -141,7 +147,7 @@ function fontsStyle(params) {
                let fontname = items[i].split('.');
                fontname = fontname[0];
                if (c_fontname != fontname) {
-                  fs.appendFile(source_folder + '/styles/fonts.sass', '@include font("' + fontname + '", "' + fontname + '", "400", "normal")\r\n', cb);
+                  fs.appendFile(source_folder + '/assets/styles/fonts.sass', '@include font("' + fontname + '", "' + fontname + '", "400", "normal")\r\n', cb);
                }
                c_fontname = fontname;
             }
