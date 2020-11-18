@@ -32,6 +32,7 @@ let { src, dest } = require('gulp'),
    del = require("del"),
    sass = require("gulp-sass"),
    autoprefixer = require("gulp-autoprefixer"),
+   fileinclude = require('gulp-file-include'),
    group_media = require("gulp-group-css-media-queries"),
    clean_css = require("gulp-clean-css"),
    rename = require("gulp-rename"),
@@ -77,7 +78,7 @@ function css(params) {
       )
       .pipe(
          autoprefixer({
-            overrideBrowserslist: ["last 5 versions"],
+            overrideBrowserslist: ["last 3 versions"],
             cascade: true
          })
       )
@@ -94,6 +95,7 @@ function css(params) {
 }
 function js() {
    return src(path.src.js)
+      .pipe(fileinclude())
       .pipe(dest(path.build.js))
       .pipe(
          uglify()

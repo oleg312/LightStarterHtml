@@ -1,3 +1,5 @@
+// * INCLUDE JS
+// @@include('test.js')
 document.addEventListener("DOMContentLoaded", function () {
    // ? SLIDE TOGGLE
    // let container = document.getElementById('toggleMe');
