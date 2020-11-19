@@ -10,9 +10,9 @@
 
 3 Write in the terminal:
 
-	- Install Node Modules: **npm i**
+- Install Node Modules: **npm i**
 
-   - Run Gulp: **gulp**
+- Run Gulp: **gulp**
 
 # ## Roadmap
 
@@ -54,9 +54,9 @@
 
 ## ## What I used
 
-1)<a  href="https://www.npmjs.com/">NPM</a>
+1) <a  href="https://www.npmjs.com/">NPM</a>
 
-2)<a  href="https://gulpjs.com/">GULP</a>
+2) <a  href="https://gulpjs.com/">GULP</a>
 
 - <a  href="https://www.npmjs.com/package/browser-sync">browser-sync</a>
 
