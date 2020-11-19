@@ -60,33 +60,33 @@
 
    - <a  href="https://www.npmjs.com/package/browser-sync">browser-sync</a>
 
-	- <a  href="https://www.npmjs.com/package/del">del</a>
+   - <a  href="https://www.npmjs.com/package/del">del</a>
 
-	- <a  href="https://www.npmjs.com/package/gulp-autoprefixer">gulp-autoprefixer</a>
+   - <a  href="https://www.npmjs.com/package/gulp-autoprefixer">gulp-autoprefixer</a>
 
-	- <a  href="https://www.npmjs.com/package/gulp-clean-css">gulp-clean-css</a>
+   - <a  href="https://www.npmjs.com/package/gulp-clean-css">gulp-clean-css</a>
 
-	- <a  href="https://www.npmjs.com/package/gulp-group-css-media-queries">gulp-group-css-media-queries</a>
+   - <a  href="https://www.npmjs.com/package/gulp-group-css-media-queries">gulp-group-css-media-queries</a>
 
-	- <a  href="https://www.npmjs.com/package/gulp-imagemin">gulp-imagemin</a>
+   - <a  href="https://www.npmjs.com/package/gulp-imagemin">gulp-imagemin</a>
 
-	- <a  href="https://www.npmjs.com/package/panini">panini</a>
+   - <a  href="https://www.npmjs.com/package/panini">panini</a>
 
-	- <a  href="https://www.npmjs.com/package/gulp-rename">gulp-rename</a>
+   - <a  href="https://www.npmjs.com/package/gulp-rename">gulp-rename</a>
 
-	- <a  href="https://www.npmjs.com/package/gulp-sass">gulp-sass</a>
+   - <a  href="https://www.npmjs.com/package/gulp-sass">gulp-sass</a>
 
-	- <a  href="https://www.npmjs.com/package/gulp-ttf2woff">gulp-ttf2woff</a>
+   - <a  href="https://www.npmjs.com/package/gulp-ttf2woff">gulp-ttf2woff</a>
 
-	- <a  href="https://www.npmjs.com/package/gulp-ttf2woff2">gulp-ttf2woff2</a>
+   - <a  href="https://www.npmjs.com/package/gulp-ttf2woff2">gulp-ttf2woff2</a>
 
-	- <a  href="https://www.npmjs.com/package/gulp-uglify-es">gulp-uglify-es</a>
+   - <a  href="https://www.npmjs.com/package/gulp-uglify-es">gulp-uglify-es</a>
 
-	- <a  href="https://www.npmjs.com/package/gulp-webp">gulp-webp</a>
+   - <a  href="https://www.npmjs.com/package/gulp-webp">gulp-webp</a>
 
-	- <a  href="https://www.npmjs.com/package/gulp-webp-html">gulp-webp-html</a>
+   - <a  href="https://www.npmjs.com/package/gulp-webp-html">gulp-webp-html</a>
 
-	- <a  href="https://www.npmjs.com/package/gulp-webpcss">gulp-webpcss</a>
+   - <a  href="https://www.npmjs.com/package/gulp-webpcss">gulp-webpcss</a>
 
-	- <a  href="https://www.npmjs.com/package/gulp-file-include">gulp-file-include</a>
+   - <a  href="https://www.npmjs.com/package/gulp-file-include">gulp-file-include</a>
 
