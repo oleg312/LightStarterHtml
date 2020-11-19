@@ -1,5 +1,3 @@
-# LightStarterHtml
-
 ![enter image description here](https://i.imgur.com/s24qHXA.png)
 
 ## ## How to use
