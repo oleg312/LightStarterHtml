@@ -2,9 +2,9 @@
 
 ## ## How to use
 
-<pre>git clone https://github.com/oleg312/LightStarterHtml.git</pre>
+<pre>git clone https://github.com/oleg312/LightStarter.git</pre>
 
-1 Clone or <a  href="https://github.com/oleg312/LightStarterHtml/archive/main.zip">Download</a> **LightStarterHtml** from GitHub
+1 Clone or <a  href="https://github.com/oleg312/LightStarter/archive/main.zip">Download</a> **LightStarter** from GitHub
 
 2 Open terminal in a folder
 
@@ -54,9 +54,9 @@
 
 ## ## What I used
 
-1) <a  href="https://www.npmjs.com/">NPM</a>
+1 <a  href="https://www.npmjs.com/">NPM</a>
 
-2) <a  href="https://gulpjs.com/">GULP</a>
+2 <a  href="https://gulpjs.com/">GULP</a>
 
    - <a  href="https://www.npmjs.com/package/browser-sync">browser-sync</a>
 
