@@ -23,7 +23,6 @@ let path = {
       js: source_folder + "/assets/js/**/*.js",
       img: source_folder + "/assets/images/**/*.{jpg,png,svg,gif,ico,webp}",
    },
-   clean: "./" + project_folder + "/"
 }
 let { src, dest } = require('gulp'),
    gulp = require('gulp'),
@@ -166,7 +165,9 @@ function watchFiles(params) {
    gulp.watch([path.watch.img], images)
 }
 function clean(params) {
-   return del(path.clean);
+   cleanOnlyProjectFiles = [path.build.css, path.build.js, path.build.fonts, path.build.img, project_folder + "/**/*.html"]
+   return del(cleanOnlyProjectFiles);
+
 }
 let build = gulp.series(clean, gulp.parallel(js, css, html, images, fonts), fontsStyle);
 let watch = gulp.parallel(build, watchFiles, browserSync);
