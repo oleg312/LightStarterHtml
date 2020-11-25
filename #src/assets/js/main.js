@@ -1,4 +1,3 @@
-// * INCLUDE JS
 document.addEventListener("DOMContentLoaded", function () {
    // ? SLIDE TOGGLE
    // let container = document.getElementById('toggleMe');

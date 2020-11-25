@@ -31,7 +31,7 @@ let { src, dest } = require('gulp'),
    del = require("del"),
    sass = require("gulp-sass"),
    autoprefixer = require("gulp-autoprefixer"),
-   fileinclude = require('gulp-file-include'),
+   concat = require('gulp-concat'),
    group_media = require("gulp-group-css-media-queries"),
    clean_css = require("gulp-clean-css"),
    rename = require("gulp-rename"),
@@ -93,8 +93,8 @@ function css(params) {
       .pipe(browsersync.stream())
 }
 function js() {
-   return src(path.src.js)
-      .pipe(fileinclude())
+   return gulp.src(['./#src/assets/js/main.js'])
+      .pipe(concat('main.js'))
       .pipe(dest(path.build.js))
       .pipe(
          uglify()
