@@ -2,7 +2,7 @@
 
 ## ## How to use
 
-<pre>git clone https://github.com/oleg312/LightStarter.git</pre>
+<pre>git clone https://github.com/oleg312/LightStarter.git .; rm -rf trunk .gitignore readme.md .git</pre>
 
 1 Clone or <a  href="https://github.com/oleg312/LightStarter/archive/main.zip">Download</a> **LightStarter** from GitHub
 
@@ -89,4 +89,3 @@
    - <a  href="https://www.npmjs.com/package/gulp-webpcss">gulp-webpcss</a>
 
    - <a  href="https://www.npmjs.com/package/gulp-concat">gulp-concat</a>
-
