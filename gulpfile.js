@@ -13,14 +13,14 @@ let path = {
    src: {
       html: source_folder + "/*.html",
       css: source_folder + "/assets/styles/style.sass",
-      js: source_folder + "/assets/js/main.js",
+      js: source_folder + "/assets/js/main.coffee",
       img: source_folder + "/assets/images/**/*.{jpg,png,svg,gif,ico,webp}",
       fonts: source_folder + "/assets/fonts/*.ttf",
    },
    watch: {
       html: source_folder + "/**/*.html",
       css: source_folder + "/assets/styles/**/*.sass",
-      js: source_folder + "/assets/js/**/*.js",
+      js: source_folder + "/assets/js/**/*.coffee",
       img: source_folder + "/assets/images/**/*.{jpg,png,svg,gif,ico,webp}",
    },
 }
@@ -41,6 +41,7 @@ let { src, dest } = require('gulp'),
    webphtml = require("gulp-webp-html"),
    webpCss = require('gulp-webp-css'),
    ttf2woff = require('gulp-ttf2woff'),
+   coffee = require('gulp-coffee')
    ttf2woff2 = require('gulp-ttf2woff2');
 function browserSync(params) {
    browsersync.init({
@@ -93,7 +94,8 @@ function css(params) {
       .pipe(browsersync.stream())
 }
 function js() {
-   return gulp.src(['./#src/assets/js/main.js'])
+   return gulp.src(['./#src/assets/js/main.coffee'])
+      .pipe(coffee())
       .pipe(concat('main.js'))
       .pipe(dest(path.build.js))
       .pipe(
