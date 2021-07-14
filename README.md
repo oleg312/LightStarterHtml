@@ -1,5 +1,3 @@
-![enter image description here](https://i.imgur.com/s24qHXA.png)
-
 ## ## How to use
 
 <pre>git clone https://github.com/oleh312/LightStarter.git .; rm -rf trunk .gitignore readme.md .git .gitattributes</pre>
