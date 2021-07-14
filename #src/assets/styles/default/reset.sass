@@ -24,8 +24,9 @@ h5,
 h6
    margin: 0
    padding: 0
+   -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
 
-// *Headings
+// HEADINGS
 h1,
 h2,
 h3,
@@ -35,18 +36,21 @@ h6
    font-size: 100%
    font-weight: normal
 
-// *List
+// LIST
 ul
    list-style: none
+   li
+      a
+         text-decoration: none
 
-// *Form
+// FORM
 button,
 input,
 select,
 textarea
    margin: 0
 
-// *Box sizing
+// BOX SIZING
 html
    box-sizing: border-box
 
@@ -56,17 +60,17 @@ html
    &::after
       box-sizing: inherit
 
-// *Media
+// MEDIA
 img,
 video
    height: auto
    max-width: 100%
 
-// *Iframe
+// IFRAME
 iframe
    border: 0
 
-// *Table
+// TABLE
 table
    border-collapse: collapse
    border-spacing: 0
