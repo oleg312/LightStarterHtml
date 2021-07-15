@@ -60,7 +60,8 @@
             top: 50%
             transform: scale(1) translate(0px, -50%)
    &__arrow
-      display: none
+      &:hover
+         cursor: pointer
    &__body
       @media screen and ( max-width:767px  )
          position: fixed
@@ -81,18 +82,18 @@
             top: 0
             left: 0
             height: 70px
-            background:#202430
+            background: #202430
             z-index: 3
    &__list
       li
          position: relative
          margin: 0px 0px 0px 20px
+         display: flex
+         align-items: center
       @media screen and ( max-width:767px  )
          li
             margin: 0px 0px 30px 0px
             flex-wrap: wrap
-            &._active .menu__sublist
-               display: block
             &:last-child
                margin: 0
       @media screen and ( min-width: 767px )
@@ -113,23 +114,16 @@
       right: 0
       background: black
       padding: 15px
-      min-width: 200px
+      min-width: 150px
       li
          margin: 0px 0px 10px 0px
          &:last-child
             margin: 0
-      @media screen and ( min-width: 767px )
-         transform: translate(0px, 10%)
-         opacity: 0
-         visibility: hidden
-         transition: all .3s ease 0s
-         pointer-events: none
       @media screen and ( max-width:767px  )
          position: relative
          background: white
          flex: 1 1 100%
          margin: 20px 0px 0px 0
-         display: none
    &__sublink
       color: white
       &:hover
@@ -137,12 +131,7 @@
       @media screen and ( max-width:767px  )
          font-size: 20px
          color: black
-body._pc .menu__list li:hover .menu__sublist
-   opacity: 1
-   visibility: visible
-   transform: translate(0px, 0px)
-   pointer-events: all
-body._touch .menu__arrow
+.menu__arrow
    display: block
    width: 0
    height: 0
@@ -151,14 +140,11 @@ body._touch .menu__arrow
    border-right: 5px solid transparent
    border-top: 10px solid white
    margin: 0px 0px 0px 5px
+   &._active
+      transform: rotate(90deg)
+
 body._touch .menu__list li
    display: flex
    align-items: center
 body._touch .menu__link
    flex: 1 1 auto
-body._touch .menu__list li._active .menu__sublist
-   opacity: 1
-   visibility: visible
-   transform: translate(0px, 0px)
-body._touch .menu__list li._active .menu__arrow
-   transform: rotate(90deg)
