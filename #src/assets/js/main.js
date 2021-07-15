@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function() {
 
    const menuLinksData = document.querySelectorAll('.menu__link[data-goto]')
    const iconMenu = document.querySelector('.menu__icon')
@@ -7,22 +7,22 @@ document.addEventListener('DOMContentLoaded', function () {
 
    // CHECK THE DEVICE
    const isMobile = {
-      Android: function () {
+      Android: function() {
          return navigator.userAgent.match(/Android/i)
       },
-      BlackBerry: function () {
+      BlackBerry: function() {
          return navigator.userAgent.match(/BlackBerry/i)
       },
-      IOS: function () {
+      IOS: function() {
          return navigator.userAgent.match(/iPhone|iPad|iPod/i)
       },
-      Opera: function () {
+      Opera: function() {
          return navigator.userAgent.match(/Opera Mini/i)
       },
-      Windows: function () {
+      Windows: function() {
          return navigator.userAgent.match(/IEMobile/i)
       },
-      any: function () {
+      any: function() {
          return (
             isMobile.Android() ||
             isMobile.BlackBerry() ||
@@ -53,6 +53,7 @@ document.addEventListener('DOMContentLoaded', function () {
       menuLinksData.forEach(menuLink => {
          menuLink.addEventListener('click', onMenuLinkClick)
       })
+
       function onMenuLinkClick(e) {
          const menuLink = e.target
          if (menuLink.dataset.goto && document.querySelector(menuLink.dataset.goto)) {
@@ -84,6 +85,7 @@ document.addEventListener('DOMContentLoaded', function () {
          menuBody.classList.remove('_active')
       })
    }
+
    // IBG METHOD
    // function ibg() {
    //    let ibg = document.querySelectorAll(".ibg");
