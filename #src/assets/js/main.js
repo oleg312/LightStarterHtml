@@ -1,11 +1,11 @@
 document.addEventListener('DOMContentLoaded', function () {
-
    const spollersArray = document.querySelectorAll('[data-spollers]')
    const menuLinksData = document.querySelectorAll('.menu__link[data-goto]')
    const iconMenu = document.querySelector('.menu__icon')
    const menuBody = document.querySelector('.menu__body')
    const menuLinks = document.querySelectorAll('.menu__link')
-
+   let menuArrows = document.querySelectorAll('.menu__arrow')
+   
    // CHECK THE DEVICE
    const isMobile = {
       Android: function () {
@@ -35,7 +35,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
    if (isMobile.any()) {
       document.body.classList.add('_touch')
-      let menuArrows = document.querySelectorAll('.menu__arrow')
       if (menuArrows.length > 0) {
          for (let index = 0; index < menuArrows.length; index++) {
             const menuArrow = menuArrows[index];
@@ -187,6 +186,7 @@ document.addEventListener('DOMContentLoaded', function () {
             e.preventDefault()
          }
       }
+
       function hideSpollersBody(spollersBLock) {
          const spollerActiveTitle = spollersBLock.querySelector('[data-spoller]._active')
          if (spollerActiveTitle) {
@@ -209,7 +209,7 @@ document.addEventListener('DOMContentLoaded', function () {
          target.style.paddingBottom = 0
          target.style.marginTop = 0
          target.style.marginBottom = 0
-         window.setTimeout(() =>{
+         window.setTimeout(() => {
             target.hidden = true
             target.style.removeProperty('height')
             target.style.removeProperty('padding-top')
@@ -224,7 +224,7 @@ document.addEventListener('DOMContentLoaded', function () {
       }
    }
 
-   let _slideDown = (target, duration = 500) =>{
+   let _slideDown = (target, duration = 500) => {
       if (!target.classList.contains('_slide')) {
          target.classList.add('_slide')
          if (target.hidden) {
@@ -262,6 +262,7 @@ document.addEventListener('DOMContentLoaded', function () {
          return _slideUp(target, duration)
       }
    }
+
 
    // IBG METHOD
    // function ibg() {
