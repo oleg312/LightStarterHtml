@@ -81,3 +81,32 @@ img
 
 // @include adaptiv-value('padding', 50, 10, 0)
 // @include adaptiv-value('font-size', 30, 16, 0)
+
+// CUSTOME STRUCTURE
+.page
+   padding: 90px 0px 30px 0px
+   &__section
+      padding: 30px
+      max-width: 1200px
+      margin: 0 auto
+      &_1
+         background: #794f45
+      &_2
+         background: #77608d
+      &_3
+         background: #7a956b
+
+   &__title
+      font-size: 40px
+      margin: 0px 0px 20px 0
+   &__text
+      font-size: 16px
+      line-height: 150%
+      p
+         margin: 0px 0px 20px 0px
+         &::before
+            color: white
+            font-size: 16px
+   &__subtitle
+      font-size: 30px
+      margin: 0px 0px 20px 0
