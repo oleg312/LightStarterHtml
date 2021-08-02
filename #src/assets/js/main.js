@@ -1,11 +1,28 @@
-// SWIPER SLIDER(VANILLA JS) https://swiperjs.com/get-started
-// JQUERY https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js
-// OWL CAROUSEL 2 SLIDER(JQUERY) https://owlcarousel2.github.io/OwlCarousel2/
-// FOTORAMA SLIDER(JQUERY) https://fotorama.io/#5264c896-cf01-4ad9-9216-114c20a388cc
-// LIGHT GALLERY(VANILLA JS) https://www.lightgalleryjs.com/
-// FANCY BOX GALLERY(JQUERY) https://fancyapps.com/fancybox/3/
-// SCROLL ANIMATION(VANILLA JS) https://michalsnik.github.io/aos/
-// GRID SYSTEM(VANILLA JS) https://github.com/e-oj/Magic-Grid
+/*
+USEFUL LINKS
+
+CDN.JS
+https://cdnjs.com/
+
+SLIDERS
+SWIPER(VANILLA JS) https://swiperjs.com/get-started
+OWL CAROUSEL 2 SLIDER(JQUERY) https://owlcarousel2.github.io/OwlCarousel2/
+FOTORAMA SLIDER(JQUERY) https://fotorama.io/#5264c896-cf01-4ad9-9216-114c20a388cc
+
+GALLERY
+LIGHT GALLERY(VANILLA JS) https://www.lightgalleryjs.com/
+FANCY BOX(JQUERY) https://fancyapps.com/fancybox/3/
+
+SCROLL ANIMATION
+AOS(VANILLA JS) https://michalsnik.github.io/aos/
+
+GRID SYSTEM
+MAGIC GRID(VANILLA JS) https://github.com/e-oj/Magic-Grid
+
+POPUP
+TINGLE(VANILLA JS) https://tingle.robinparisi.com/
+POPUP(JQUERY) https://jquerymodal.com/
+*/
 
 // VARIABLES
 const spollersArray = document.querySelectorAll('[data-spollers]')
@@ -14,36 +31,36 @@ const iconMenu = document.querySelector('.menu__icon')
 const menuBody = document.querySelector('.menu__body')
 const menuLinks = document.querySelectorAll('.menu__link')
 const menuArrows = document.querySelectorAll('.menu__arrow')
+const sublists = document.querySelectorAll('.menu__sublist')
 // const load = document.querySelector('.loading')
+const isMobile = {
+   Android: function () {
+      return navigator.userAgent.match(/Android/i)
+   },
+   BlackBerry: function () {
+      return navigator.userAgent.match(/BlackBerry/i)
+   },
+   IOS: function () {
+      return navigator.userAgent.match(/iPhone|iPad|iPod/i)
+   },
+   Opera: function () {
+      return navigator.userAgent.match(/Opera Mini/i)
+   },
+   Windows: function () {
+      return navigator.userAgent.match(/IEMobile/i)
+   },
+   any: function () {
+      return (
+         isMobile.Android() ||
+         isMobile.BlackBerry() ||
+         isMobile.IOS() ||
+         isMobile.Opera() ||
+         isMobile.Windows());
+   }
+}
 
 document.addEventListener('DOMContentLoaded', function () {
    // CHECK THE DEVICE
-   const isMobile = {
-      Android: function () {
-         return navigator.userAgent.match(/Android/i)
-      },
-      BlackBerry: function () {
-         return navigator.userAgent.match(/BlackBerry/i)
-      },
-      IOS: function () {
-         return navigator.userAgent.match(/iPhone|iPad|iPod/i)
-      },
-      Opera: function () {
-         return navigator.userAgent.match(/Opera Mini/i)
-      },
-      Windows: function () {
-         return navigator.userAgent.match(/IEMobile/i)
-      },
-      any: function () {
-         return (
-            isMobile.Android() ||
-            isMobile.BlackBerry() ||
-            isMobile.IOS() ||
-            isMobile.Opera() ||
-            isMobile.Windows());
-      }
-   }
-
    if (isMobile.any()) {
       document.body.classList.add('_touch')
       if (menuArrows.length > 0) {
@@ -205,6 +222,7 @@ document.addEventListener('DOMContentLoaded', function () {
             _slideUp(spollerActiveTitle.nextElementSibling, 500)
          }
       }
+
    }
 
    let _slideUp = (target, duration = 500) => {
@@ -272,6 +290,32 @@ document.addEventListener('DOMContentLoaded', function () {
       } else {
          return _slideUp(target, duration)
       }
+   }
+
+   function arrowActive(arrows, sublists) {
+      for (const arrow of arrows) {
+         arrow.onclick = () => {
+            this.arrow = arrow
+            arrow.classList.toggle('_active')
+            if (arrows[0] === arrow) {
+               sublists[0].classList.toggle('open')
+            } else if (arrows[1] === arrow) {
+               sublists[1].classList.toggle('open')
+            }
+         }
+      }
+   }
+   arrowActive(menuArrows, sublists)
+
+   document.onclick = function (e) {
+      if (event.target.className != 'menu__arrow' && event.target.className != 'menu__arrow _active' && event.target.className != 'menu__sublink' && event.target.className != 'menu__sublist open' && event.target.className != 'sublist-li' && event.target.className != 'menu__sublink') {
+         for (const sublist of sublists) {
+            sublist.classList.remove('open')
+         }
+         for (const arrow of menuArrows) {
+            arrow.classList.remove('_active')
+         }
+      };
    }
 
    // IBG METHOD
