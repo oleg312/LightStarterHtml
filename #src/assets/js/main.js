@@ -17,11 +17,16 @@ SCROLL ANIMATION
 AOS(VANILLA JS) https://michalsnik.github.io/aos/
 
 GRID SYSTEM
-MAGIC GRID(VANILLA JS) https://github.com/e-oj/Magic-Grid
+EG.JS(VANILLA JS) https://naver.github.io/egjs-infinitegrid/
 
 POPUP
 TINGLE(VANILLA JS) https://tingle.robinparisi.com/
 POPUP(JQUERY) https://jquerymodal.com/
+
+LAZY LOAD 
+JQUERY LAZY http://jquery.eisbehr.de/lazy/
+LOZAD (VANILLA JS) https://github.com/ApoorvSaxena/lozad.js
+
 */
 
 // VARIABLES
