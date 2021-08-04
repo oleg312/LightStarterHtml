@@ -1,5 +1,5 @@
 ## ## How to use
-
+![enter image description here](https://github.com/oleh312/LightStarter/blob/main/%23src/assets/images/1.jpg)
 <pre>git clone https://github.com/oleh312/LightStarter.git .; rm -rf trunk .gitignore readme.md .git .gitattributes</pre>
 
 1 Clone or <a  href="https://github.com/oleh312/LightStarter/archive/main.zip">Download</a> **LightStarter** from GitHub
