@@ -25,7 +25,8 @@ POPUP(JQUERY) https://jquerymodal.com/
 
 LAZY LOAD 
 JQUERY LAZY http://jquery.eisbehr.de/lazy/
-LOZAD (VANILLA JS) https://github.com/ApoorvSaxena/lozad.js
+LOZAD(VANILLA JS) https://github.com/ApoorvSaxena/lozad.js
+LAYZR(VANILLA JS) https://github.com/callmecavs/layzr.js
 
 */
 
