@@ -23,7 +23,7 @@ POPUP
 TINGLE(VANILLA JS) https://tingle.robinparisi.com/
 POPUP(JQUERY) https://jquerymodal.com/
 
-LAZY LOAD 
+LAZY LOAD
 JQUERY LAZY http://jquery.eisbehr.de/lazy/
 LOZAD(VANILLA JS) https://github.com/ApoorvSaxena/lozad.js
 LAYZR(VANILLA JS) https://github.com/callmecavs/layzr.js
@@ -313,16 +313,20 @@ document.addEventListener('DOMContentLoaded', function () {
    }
    arrowActive(menuArrows, sublists)
 
-   document.onclick = function (e) {
-      if (event.target.className != 'menu__arrow' && event.target.className != 'menu__arrow _active' && event.target.className != 'menu__sublink' && event.target.className != 'menu__sublist open' && event.target.className != 'sublist-li' && event.target.className != 'menu__sublink') {
-         for (const sublist of sublists) {
-            sublist.classList.remove('open')
-         }
+   // ACTION LISTEN
+   function documentActions(e) {
+      const targetElement = e.target
+      if (!targetElement.closest('.menu__arrow') && document.querySelector('.menu__arrow._active') && !targetElement.closest('.menu__sublist') && document.querySelector('.menu__sublist.open')) {
          for (const arrow of menuArrows) {
             arrow.classList.remove('_active')
          }
-      };
+         for (const sublist of sublists) {
+            sublist.classList.remove('open')
+         }
+      }
+      // console.log(targetElement)
    }
+   document.addEventListener("click", documentActions)
 
    // IBG METHOD
    // function ibg() {
@@ -475,7 +479,7 @@ document.addEventListener('DOMContentLoaded', function () {
    //       dynamicAdapt();
    //    })();
 
-});
+})
 
 // PRELOADER
 // window.onload = (function () {
