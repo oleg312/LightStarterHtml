@@ -2,7 +2,7 @@
 
 1 Clean dist folder
 
-2 Auto connect fonts, convert and compress fonts to woff2, woff
+2 Auto connect fonts, convert and compress to woff2, woff
 
 3 Compress and convert images to webp
 
@@ -10,13 +10,13 @@
 
 5 Auto add picture structure for webp and css webp
 
-6 Add prefix for old browsers, clean-css, group css media queries
+6 Add prefix for old browsers, clean css, group css media queries
 
 7 Notify if error
 
-8 Add version-number for css and js files
+8 Add version number for css and js files
 
-9 webpack for work with js
+9 Webpack for work with js
 
 
 ## ## Dependencies
