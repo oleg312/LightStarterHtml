@@ -1,3 +1,30 @@
+## ## Features
+
+1 Clean dist folder
+
+2 Auto connect fonts, convert and compress fonts to woff2, woff
+
+3 Compress and convert images to webp
+
+4 Connect pictures from anywhere => @img/file.png
+
+5 Auto add picture structure for webp and css webp
+
+6 Add prefix for old browsers, clean-css, group css media queries
+
+7 Notify if error
+
+8 Add version-number for css and js files
+
+9 webpack for work with js
+
+
+## ## Dependencies
+
+<a  href="https://nodejs.org/en/">Nodejs v17.3.0</a>
+
+<a  href="https://gulpjs.com/docs/en/getting-started/quick-start/">Gulp global cli</a>
+
 ## ## How to use
 
 <pre>git clone https://github.com/oleh312/LightStarter.git .; rm -rf trunk .gitignore readme.md .git .gitattributes</pre>
@@ -10,37 +37,42 @@
 
 - Install Node Modules: **npm i**
 
-- Run Gulp: **gulp**
+- Run for development: **npm run dev**
+
+- Run for production: **npm run build**
+
+- Archive for production: **npm run zip**
+
 
 # ## Roadmap
 
-## Source_folder **#src**
+## Source_folder **src**
 
-- Main **_file_** located in **/index.html**
+- Main **_file_** located in **html/index.html**
 
-- Layouts **_file_** located in **/layouts/**
+- Layouts **_file_** located in **html/layouts/**
 
-- Partials **_file_** located in **/partials/**
+- Partials **_file_** located in **html/partials/**
 
-- All custom **_scripts_** located in **/assets/js/**
+- All custom **_scripts_** located in **js/**
 
-- All custom **_styles_** located in **/assets/styles/**
+- All custom **_styles_** located in **scss/**
 
-- All **_images_** sources placed in **/assets/images/**
+- All **_images_** sources placed in **images/**
 
-- All **_fonts_** sources placed in **/assets/fonts/**
+- All **_fonts_** sources placed in **fonts/**
 
-## Project_folder **__dirname** (created automatically)
+## Project_folder **dist** (created automatically)
 
-- Main **_file_** located in **/index.html**
+- Main **_file_** located in **index.html**
 
-- All custom **_scripts_** located in **/assets/js/**
+- All custom **_scripts_** located in **js/**
 
-- All custom **_styles_** located in **/assets/styles/**
+- All custom **_styles_** located in **css/**
 
-- All **_images_** sources placed in **/assets/images/**
+- All **_images_** sources placed in **images/**
 
-- All **_fonts_** sources placed in **/assets/fonts/**
+- All **_fonts_** sources placed in **fonts/**
 
 ## ## Basic commands
 
@@ -48,13 +80,15 @@
 
 > **npm i**
 
-> **gulp**
+> **npm run dev**
+
+> **npm run build**
+
+> **npm run zip**
 
 ## ## What I used
 
-1 <a  href="https://www.npmjs.com/">NPM</a>
-
-2 <a  href="https://gulpjs.com/">GULP</a>
+<a  href="https://gulpjs.com/">GULP</a>
 
    - <a  href="https://www.npmjs.com/package/browser-sync">browser-sync</a>
 
@@ -74,16 +108,38 @@
 
    - <a  href="https://www.npmjs.com/package/gulp-sass">gulp-sass</a>
 
-   - <a  href="https://www.npmjs.com/package/gulp-ttf2woff">gulp-ttf2woff</a>
-
    - <a  href="https://www.npmjs.com/package/gulp-ttf2woff2">gulp-ttf2woff2</a>
-
-   - <a  href="https://www.npmjs.com/package/gulp-uglify-es">gulp-uglify-es</a>
 
    - <a  href="https://www.npmjs.com/package/gulp-webp">gulp-webp</a>
 
-   - <a  href="https://www.npmjs.com/package/gulp-webp-html">gulp-webp-html</a>
-
    - <a  href="https://www.npmjs.com/package/gulp-webpcss">gulp-webpcss</a>
 
-   - <a  href="https://www.npmjs.com/package/gulp-concat">gulp-concat</a>
+   - <a  href="https://www.npmjs.com/package/fs">fs</a>
+
+   - <a  href="https://www.npmjs.com/package/gulp-fonter">gulp-fonter</a>
+
+   - <a  href="https://www.npmjs.com/package/gulp-if">gulp-if</a>
+
+   - <a  href="https://www.npmjs.com/package/gulp-newer">gulp-newer</a>
+
+   - <a  href="https://www.npmjs.com/package/gulp-notify">gulp-notify</a>
+
+   - <a  href="https://www.npmjs.com/package/gulp-plumber">gulp-plumber</a>
+
+   - <a  href="https://www.npmjs.com/package/gulp-replace">gulp-replace</a>
+
+   - <a  href="https://www.npmjs.com/package/gulp-util">gulp-util</a>
+
+   - <a  href="https://www.npmjs.com/package/gulp-version-number">gulp-version-number</a>
+
+   - <a  href="https://www.npmjs.com/package/sass">sass</a>
+
+   - <a  href="https://www.npmjs.com/package/gulp-webp-html-nosvg">gulp-webp-html-nosvg</a>
+
+   - <a  href="https://www.npmjs.com/package/gulp-zip">gulp-zip</a>
+
+   - <a  href="https://www.npmjs.com/package/webp-converter">webp-converter</a>
+
+   - <a  href="https://www.npmjs.com/package/webpack">webpack</a>
+
+   - <a  href="https://www.npmjs.com/package/webpack-stream">webpack-stream</a>
