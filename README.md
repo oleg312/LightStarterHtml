@@ -116,7 +116,7 @@
 
    - <a  href="https://www.npmjs.com/package/fs">fs</a>
 
-   - <a  href="https://www.npmjs.com/package/gulp-ttf2woff">gulp-ttf2woff</a>
+   - <a  href="https://www.npmjs.com/package/gulp-fonter-2">gulp-fonter-2</a>
 
    - <a  href="https://www.npmjs.com/package/gulp-if">gulp-if</a>
 
