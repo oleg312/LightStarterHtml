@@ -27,9 +27,9 @@
 
 ## ## How to use
 
-<pre>git clone https://github.com/oleh312/LightStarter.git .; rm -rf trunk .gitignore readme.md .git .gitattributes</pre>
+<pre>git clone https://github.com/oleh19127/LightStarter.git .; rm -rf trunk .gitignore readme.md .git .gitattributes</pre>
 
-1 Clone or <a  href="https://github.com/oleh312/LightStarter/archive/main.zip">Download</a> **LightStarter** from GitHub
+1 Clone or <a  href="https://github.com/oleh19127/LightStarter/archive/main.zip">Download</a> **LightStarter** from GitHub
 
 2 Open terminal in a folder
 
